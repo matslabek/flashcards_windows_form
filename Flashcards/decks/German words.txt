@@ -1,8 +1,10 @@
+Baum
+tree
 Brot
 Bread
+Essen
+Food
 Geld
 money
 Welt
 word
-Baum
-tree

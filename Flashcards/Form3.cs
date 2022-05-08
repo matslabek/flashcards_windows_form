@@ -26,8 +26,6 @@ namespace Flashcards
             this.currentCardIndex = 0;
         }
 
-
-
         private void Form3_Load(object sender, EventArgs e)
         {
             labelCardSetTitle.Text = this.currentSet.name;

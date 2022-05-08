@@ -34,6 +34,20 @@ namespace Flashcards
             this.cards.Add(card);
         }
 
+        public void shuffle()
+        {
+            Random rand = new Random();
+            int n = this.cards.Count;
+            while (n > 1)
+            {
+                n--;
+                int k = rand.Next(n + 1);
+                var c = this.cards[k];
+                this.cards[k] = this.cards[n];
+                this.cards[n] = c;
+            }
+        }
+
     }
 
     internal static class Program

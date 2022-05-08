@@ -65,7 +65,7 @@ namespace Flashcards
                 cardSet emptySelectedSet = new cardSet(selectSetComboBox.SelectedItem.ToString());
 
                 cardSet selectedSet = loadCardSet(emptySelectedSet);
-
+                selectedSet.shuffle();
                 LearnForm learnForm = new LearnForm(selectedSet);
                 learnForm.Show();
             }
