@@ -14,9 +14,11 @@ namespace Flashcards
     public partial class EditSetForm : Form
     {
         private cardSet currentSet;
-        
-        public EditSetForm(cardSet _currentCardSet)
+        private MenuForm mainForm;
+
+        public EditSetForm(cardSet _currentCardSet, MenuForm callingForm)
         {
+            this.mainForm = callingForm as MenuForm;
             InitializeComponent();
             this.currentSet = _currentCardSet;
 
@@ -62,8 +64,16 @@ namespace Flashcards
         private void saveEditedSet(object sender, FormClosingEventArgs e)
         {
             string fileName = Program.path + this.currentSet.name + ".txt";
-            StreamWriter sw = new StreamWriter(fileName);
             ListView.ListViewItemCollection cards = this.cardSetListView.Items;
+
+            if (cards.Count == 0)
+            {
+                File.Delete(fileName);
+                this.mainForm.selectSetComboBox.Items.Remove(this.currentSet.name);
+                return;
+            }
+
+            StreamWriter sw = new StreamWriter(fileName);
 
             foreach (ListViewItem item in cards)
             {

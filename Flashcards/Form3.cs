@@ -13,16 +13,16 @@ namespace Flashcards
 {
     public partial class LearnForm : Form
     {
-        private cardSet currentDeck;
+        private cardSet currentSet;
         private int noOfCards;
         private int currentCardIndex;
 
 
-        public LearnForm(cardSet _currentDeck)
+        public LearnForm(cardSet _currentSet)
         {
             InitializeComponent();
-            this.currentDeck = _currentDeck;
-            this.noOfCards = this.currentDeck.cards.Count;
+            this.currentSet = _currentSet;
+            this.noOfCards = this.currentSet.cards.Count;
             this.currentCardIndex = 0;
         }
 
@@ -30,14 +30,18 @@ namespace Flashcards
 
         private void Form3_Load(object sender, EventArgs e)
         {
-            labelCardSetTitle.Text = this.currentDeck.name;
-            labelTerm.Text = this.currentDeck.cards[0].name;
+            labelCardSetTitle.Text = this.currentSet.name;
+            if (this.noOfCards == 0)
+            {
+                return;
+            }    
+            labelTerm.Text = this.currentSet.cards[0].name;
             labelDescription.Text = "???";
         }
 
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            labelDescription.Text = this.currentDeck.cards[currentCardIndex].description;
+            labelDescription.Text = this.currentSet.cards[currentCardIndex].description;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -47,13 +51,12 @@ namespace Flashcards
                 string text = "Congrats, you're done!";
                 MessageBox.Show(text);
                 buttonNext.Enabled = false;
-                
             }
             else
             {
                 this.currentCardIndex++;
                 labelDescription.Text = "???";
-                labelTerm.Text = currentDeck.cards[currentCardIndex].name;
+                labelTerm.Text = currentSet.cards[currentCardIndex].name;
             }
 
 

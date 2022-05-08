@@ -49,7 +49,6 @@ namespace Flashcards
                 sw.WriteLine(card.description);
             }
             sw.Close();
-
         }
 
         private void AddNewSetForm_Load(object sender, EventArgs e)
@@ -57,5 +56,6 @@ namespace Flashcards
             this.FormClosing += new FormClosingEventHandler(SaveOn_Close);
             this.mainForm.addItemToComboBox(this.currentDeck.name);
         }
+
     }
 }

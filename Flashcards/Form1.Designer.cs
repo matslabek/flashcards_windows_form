@@ -40,7 +40,8 @@
             // buttonCreateSet
             // 
             this.buttonCreateSet.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonCreateSet.Location = new System.Drawing.Point(641, 419);
+            this.buttonCreateSet.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonCreateSet.Location = new System.Drawing.Point(629, 419);
             this.buttonCreateSet.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCreateSet.Name = "buttonCreateSet";
             this.buttonCreateSet.Size = new System.Drawing.Size(198, 83);
@@ -54,7 +55,7 @@
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
             this.labelTitle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(344, 43);
+            this.labelTitle.Location = new System.Drawing.Point(340, 61);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
             this.labelTitle.Size = new System.Drawing.Size(325, 23);
@@ -64,10 +65,11 @@
             // buttonLearn
             // 
             this.buttonLearn.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonLearn.Location = new System.Drawing.Point(255, 214);
+            this.buttonLearn.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonLearn.Location = new System.Drawing.Point(288, 225);
             this.buttonLearn.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLearn.Name = "buttonLearn";
-            this.buttonLearn.Size = new System.Drawing.Size(233, 150);
+            this.buttonLearn.Size = new System.Drawing.Size(199, 93);
             this.buttonLearn.TabIndex = 2;
             this.buttonLearn.Text = "Learn";
             this.buttonLearn.UseVisualStyleBackColor = false;
@@ -86,7 +88,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(153, 454);
+            this.label2.Location = new System.Drawing.Point(188, 449);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 23);
@@ -96,10 +98,11 @@
             // buttonEditDeck
             // 
             this.buttonEditDeck.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonEditDeck.Location = new System.Drawing.Point(544, 214);
+            this.buttonEditDeck.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.buttonEditDeck.Location = new System.Drawing.Point(536, 225);
             this.buttonEditDeck.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEditDeck.Name = "buttonEditDeck";
-            this.buttonEditDeck.Size = new System.Drawing.Size(217, 148);
+            this.buttonEditDeck.Size = new System.Drawing.Size(199, 93);
             this.buttonEditDeck.TabIndex = 7;
             this.buttonEditDeck.Text = "Edit deck";
             this.buttonEditDeck.UseVisualStyleBackColor = false;
@@ -110,7 +113,7 @@
             this.selectSetComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.selectSetComboBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.selectSetComboBox.FormattingEnabled = true;
-            this.selectSetComboBox.Location = new System.Drawing.Point(407, 131);
+            this.selectSetComboBox.Location = new System.Drawing.Point(385, 131);
             this.selectSetComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.selectSetComboBox.Name = "selectSetComboBox";
             this.selectSetComboBox.Size = new System.Drawing.Size(242, 31);
@@ -145,7 +148,7 @@
         private System.Windows.Forms.TextBox newSetTextBox;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button buttonEditDeck;
-        private System.Windows.Forms.ComboBox selectSetComboBox;
+        public System.Windows.Forms.ComboBox selectSetComboBox;
     }
 }
 

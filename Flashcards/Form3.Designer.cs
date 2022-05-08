@@ -41,7 +41,7 @@
             this.labelCardSetTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCardSetTitle.AutoSize = true;
             this.labelCardSetTitle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelCardSetTitle.Location = new System.Drawing.Point(332, 55);
+            this.labelCardSetTitle.Location = new System.Drawing.Point(325, 57);
             this.labelCardSetTitle.Name = "labelCardSetTitle";
             this.labelCardSetTitle.Size = new System.Drawing.Size(114, 23);
             this.labelCardSetTitle.TabIndex = 0;
@@ -52,7 +52,7 @@
             this.labelTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTerm.BackColor = System.Drawing.SystemColors.HighlightText;
             this.labelTerm.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTerm.Location = new System.Drawing.Point(144, 128);
+            this.labelTerm.Location = new System.Drawing.Point(148, 128);
             this.labelTerm.Name = "labelTerm";
             this.labelTerm.Size = new System.Drawing.Size(187, 216);
             this.labelTerm.TabIndex = 1;
@@ -66,7 +66,7 @@
             this.labelDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDescription.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelDescription.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelDescription.Location = new System.Drawing.Point(453, 128);
+            this.labelDescription.Location = new System.Drawing.Point(449, 128);
             this.labelDescription.Name = "labelDescription";
             this.labelDescription.Size = new System.Drawing.Size(187, 216);
             this.labelDescription.TabIndex = 2;
@@ -78,7 +78,7 @@
             this.buttonShow.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonShow.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonShow.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonShow.Location = new System.Drawing.Point(499, 373);
+            this.buttonShow.Location = new System.Drawing.Point(253, 393);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(95, 38);
             this.buttonShow.TabIndex = 3;
@@ -90,9 +90,9 @@
             // 
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonNext.Location = new System.Drawing.Point(195, 373);
+            this.buttonNext.Location = new System.Drawing.Point(429, 393);
             this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(90, 38);
+            this.buttonNext.Size = new System.Drawing.Size(95, 38);
             this.buttonNext.TabIndex = 4;
             this.buttonNext.Text = "Next";
             this.buttonNext.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Highlight;
+            this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(742, 464);
             this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonShow);

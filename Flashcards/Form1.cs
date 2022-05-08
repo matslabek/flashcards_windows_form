@@ -13,15 +13,15 @@ namespace Flashcards
 {
     public partial class MenuForm : Form
     {
-        private List<String> cardDecks;
+        private List<String> cardSets;
 
         public MenuForm()
         {
             InitializeComponent();
-            this.cardDecks = Directory.EnumerateFiles(Program.path)
+            this.cardSets = Directory.EnumerateFiles(Program.path)
                                        .Select(p => Path.GetFileName(p))
                                        .ToList();
-            foreach (string deck in this.cardDecks)
+            foreach (string deck in this.cardSets)
             {
                 // -4 to cut off file ext
                 selectSetComboBox.Items.Add(deck.Substring(0, deck.Length - 4));
@@ -82,7 +82,7 @@ namespace Flashcards
                 string msg = "Please provide a name.";
                 MessageBox.Show(msg);
             }
-            else if (this.cardDecks.Contains(newSetTextBox.Text))
+            else if (this.cardSets.Contains(newSetTextBox.Text))
             {
                 string msg = "You've already created a set with this name!";
                 MessageBox.Show(msg);
@@ -90,7 +90,7 @@ namespace Flashcards
             else
             {
                 bool alreadyThere = false;
-                foreach (string item in this.cardDecks)//Iterate through each item.
+                foreach (string item in this.cardSets)//Iterate through each item.
                 {
                     if (item.Contains(newSetTextBox.Text))
                     {
@@ -120,7 +120,7 @@ namespace Flashcards
 
                 cardSet selectedSet = loadCardSet(emptySelectedSet);
 
-                EditSetForm editSetForm = new EditSetForm(selectedSet);
+                EditSetForm editSetForm = new EditSetForm(selectedSet, this);
                 editSetForm.Show();
             }
             else
