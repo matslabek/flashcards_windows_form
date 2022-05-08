@@ -41,7 +41,7 @@
             this.labelCardSetTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCardSetTitle.AutoSize = true;
             this.labelCardSetTitle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelCardSetTitle.Location = new System.Drawing.Point(285, 65);
+            this.labelCardSetTitle.Location = new System.Drawing.Point(332, 55);
             this.labelCardSetTitle.Name = "labelCardSetTitle";
             this.labelCardSetTitle.Size = new System.Drawing.Size(114, 23);
             this.labelCardSetTitle.TabIndex = 0;
@@ -50,33 +50,35 @@
             // labelTerm
             // 
             this.labelTerm.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.labelTerm.AutoSize = true;
+            this.labelTerm.BackColor = System.Drawing.SystemColors.HighlightText;
             this.labelTerm.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTerm.Location = new System.Drawing.Point(162, 225);
+            this.labelTerm.Location = new System.Drawing.Point(144, 128);
             this.labelTerm.Name = "labelTerm";
-            this.labelTerm.Size = new System.Drawing.Size(80, 23);
+            this.labelTerm.Size = new System.Drawing.Size(187, 216);
             this.labelTerm.TabIndex = 1;
             this.labelTerm.Text = "*TERM*";
+            this.labelTerm.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // labelDescription
             // 
             this.labelDescription.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelDescription.BackColor = System.Drawing.SystemColors.HighlightText;
+            this.labelDescription.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.labelDescription.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.labelDescription.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelDescription.Location = new System.Drawing.Point(370, 153);
+            this.labelDescription.Location = new System.Drawing.Point(453, 128);
             this.labelDescription.Name = "labelDescription";
-            this.labelDescription.Size = new System.Drawing.Size(300, 169);
+            this.labelDescription.Size = new System.Drawing.Size(187, 216);
             this.labelDescription.TabIndex = 2;
             this.labelDescription.Text = "* DESCRIPTION *";
             this.labelDescription.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.labelDescription.Visible = false;
             // 
             // buttonShow
             // 
             this.buttonShow.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonShow.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonShow.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonShow.Location = new System.Drawing.Point(466, 338);
+            this.buttonShow.Location = new System.Drawing.Point(499, 373);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(95, 38);
             this.buttonShow.TabIndex = 3;
@@ -88,7 +90,7 @@
             // 
             this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonNext.Location = new System.Drawing.Point(166, 338);
+            this.buttonNext.Location = new System.Drawing.Point(195, 373);
             this.buttonNext.Name = "buttonNext";
             this.buttonNext.Size = new System.Drawing.Size(90, 38);
             this.buttonNext.TabIndex = 4;

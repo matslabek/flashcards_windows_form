@@ -47,7 +47,6 @@
             this.label1.Size = new System.Drawing.Size(39, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Term";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -75,7 +74,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(232, 298);
+            this.button1.Location = new System.Drawing.Point(329, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(184, 23);
             this.button1.TabIndex = 4;

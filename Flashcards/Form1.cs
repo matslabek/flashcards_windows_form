@@ -23,9 +23,34 @@ namespace Flashcards
                                        .ToList();
             foreach (string deck in this.cardDecks)
             {
+                // -4 to cut off file ext
                 selectSetComboBox.Items.Add(deck.Substring(0, deck.Length - 4));
             }
             
+        }
+
+        private cardSet loadCardSet(cardSet emptyCardSet)
+        {
+
+            string fileName = Program.path + emptyCardSet.name + ".txt";
+            cardSet fullCardSet = new cardSet(emptyCardSet.name);
+            string[] lines = File.ReadAllLines(fileName);
+            try
+            {
+                for (int i = 1; i < lines.Length; i += 2)
+                {
+                    Card _cardToAdd = new Card(lines[i - 1], lines[i]);
+                    fullCardSet.addCard(_cardToAdd);
+                }
+            }
+            catch (Exception ex)
+            {
+                string message = "Sorry, we encountered problem with the card file, does it have correct structure? Error: " + ex.Message;
+                MessageBox.Show(message);
+            }
+            return fullCardSet;
+
+
         }
 
         public void addItemToComboBox(string cardSet)
@@ -33,22 +58,13 @@ namespace Flashcards
             this.selectSetComboBox.Items.Add(cardSet);
         }
 
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button2_Click(object sender, EventArgs e)
         {
             if (selectSetComboBox.SelectedIndex > -1)
             {
-                cardSet selectedSet = new cardSet(selectSetComboBox.SelectedItem.ToString());
+                cardSet emptySelectedSet = new cardSet(selectSetComboBox.SelectedItem.ToString());
+
+                cardSet selectedSet = loadCardSet(emptySelectedSet);
 
                 LearnForm learnForm = new LearnForm(selectedSet);
                 learnForm.Show();
@@ -56,7 +72,6 @@ namespace Flashcards
             else
             {
                 MessageBox.Show("Select a set");
-                labelSetNotSelected.Visible = true;
             }
         }
 
@@ -64,12 +79,12 @@ namespace Flashcards
         {
             if (newSetTextBox.Text == "")
             {
-                string msg = "Please provide name.";
+                string msg = "Please provide a name.";
                 MessageBox.Show(msg);
             }
             else if (this.cardDecks.Contains(newSetTextBox.Text))
             {
-                string msg = "You already have a set with this name";
+                string msg = "You've already created a set with this name!";
                 MessageBox.Show(msg);
             } 
             else
@@ -97,19 +112,21 @@ namespace Flashcards
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void buttonEditDeck_Click(object sender, EventArgs e)
         {
+            if (selectSetComboBox.SelectedIndex > -1)
+            {
+                cardSet emptySelectedSet = new cardSet(selectSetComboBox.SelectedItem.ToString());
 
-        }
+                cardSet selectedSet = loadCardSet(emptySelectedSet);
 
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+                EditSetForm editSetForm = new EditSetForm(selectedSet);
+                editSetForm.Show();
+            }
+            else
+            {
+                MessageBox.Show("Select a set");
+            }
         }
     }
 }

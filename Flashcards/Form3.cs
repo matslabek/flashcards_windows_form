@@ -18,32 +18,10 @@ namespace Flashcards
         private int currentCardIndex;
 
 
-        private cardSet loadCardSet(cardSet emptyCardSet)
-        {
-
-            string fileName = Program.path + emptyCardSet.name + ".txt";
-            cardSet fullCardSet = new cardSet(emptyCardSet.name);
-            string [] lines = File.ReadAllLines(fileName);
-            try
-            {
-                for (int i = 1; i < lines.Length; i += 2)
-                {
-                    Card _cardToAdd = new Card(lines[i - 1], lines[i]);
-                    fullCardSet.addCard(_cardToAdd);
-                }
-            } catch (Exception ex)
-            {
-                string message = "Sorry, we encountered problem with the card file, does it have correct structure? Error: " + ex.Message;
-                MessageBox.Show(message);
-            }
-            return fullCardSet;
-            
-            
-        }
         public LearnForm(cardSet _currentDeck)
         {
             InitializeComponent();
-            this.currentDeck = loadCardSet(_currentDeck);
+            this.currentDeck = _currentDeck;
             this.noOfCards = this.currentDeck.cards.Count;
             this.currentCardIndex = 0;
         }
@@ -54,12 +32,12 @@ namespace Flashcards
         {
             labelCardSetTitle.Text = this.currentDeck.name;
             labelTerm.Text = this.currentDeck.cards[0].name;
-            labelDescription.Text = this.currentDeck.cards[0].description;
+            labelDescription.Text = "???";
         }
 
         private void buttonShow_Click(object sender, EventArgs e)
         {
-            labelDescription.Visible = true;
+            labelDescription.Text = this.currentDeck.cards[currentCardIndex].description;
         }
 
         private void buttonNext_Click(object sender, EventArgs e)
@@ -74,9 +52,8 @@ namespace Flashcards
             else
             {
                 this.currentCardIndex++;
-                labelDescription.Visible = false;
+                labelDescription.Text = "???";
                 labelTerm.Text = currentDeck.cards[currentCardIndex].name;
-                labelDescription.Text = currentDeck.cards[currentCardIndex].description;
             }
 
 
