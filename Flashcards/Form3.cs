@@ -49,6 +49,7 @@ namespace Flashcards
                 string text = "Congrats, you're done!";
                 MessageBox.Show(text);
                 buttonNext.Enabled = false;
+                buttonGoAgain.Visible = true;
             }
             else
             {
@@ -58,6 +59,16 @@ namespace Flashcards
             }
 
 
+        }
+
+        private void buttonGoAgain_Click(object sender, EventArgs e)
+        {
+            this.currentCardIndex = 0;
+            this.currentSet.shuffle();
+            buttonNext.Enabled = true;
+            labelDescription.Text = "???";
+            buttonGoAgain.Visible= false;
+            labelTerm.Text = currentSet.cards[currentCardIndex].name;
         }
     }
 }
