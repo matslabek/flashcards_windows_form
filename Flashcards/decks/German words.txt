@@ -1,8 +1,0 @@
-Baum
-tree
-Brot
-Bread
-Essen
-Food
-Welt
-word

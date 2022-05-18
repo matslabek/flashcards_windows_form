@@ -44,8 +44,11 @@ namespace Flashcards
 
         private void buttonRemove_Click(object sender, EventArgs e)
         {
-            if (cardSetListView.Items.Count > 0)
+            if (cardSetListView.Items.Count > 0 && cardSetListView.SelectedItems.Count > 0)
+            {
                 cardSetListView.Items.Remove(cardSetListView.SelectedItems[0]);
+            }
+          
         }
 
         private void button1_Click(object sender, EventArgs e)

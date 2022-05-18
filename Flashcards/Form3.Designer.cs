@@ -33,8 +33,10 @@
             this.labelTerm = new System.Windows.Forms.Label();
             this.labelDescription = new System.Windows.Forms.Label();
             this.buttonShow = new System.Windows.Forms.Button();
-            this.buttonNext = new System.Windows.Forms.Button();
             this.buttonGoAgain = new System.Windows.Forms.Button();
+            this.labelCorrect = new System.Windows.Forms.Label();
+            this.buttonX = new System.Windows.Forms.Button();
+            this.buttonV = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelCardSetTitle
@@ -79,7 +81,7 @@
             this.buttonShow.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonShow.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonShow.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonShow.Location = new System.Drawing.Point(203, 390);
+            this.buttonShow.Location = new System.Drawing.Point(268, 386);
             this.buttonShow.Name = "buttonShow";
             this.buttonShow.Size = new System.Drawing.Size(95, 38);
             this.buttonShow.TabIndex = 3;
@@ -87,24 +89,12 @@
             this.buttonShow.UseVisualStyleBackColor = false;
             this.buttonShow.Click += new System.EventHandler(this.buttonShow_Click);
             // 
-            // buttonNext
-            // 
-            this.buttonNext.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.buttonNext.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonNext.Location = new System.Drawing.Point(316, 390);
-            this.buttonNext.Name = "buttonNext";
-            this.buttonNext.Size = new System.Drawing.Size(95, 38);
-            this.buttonNext.TabIndex = 4;
-            this.buttonNext.Text = "Next";
-            this.buttonNext.UseVisualStyleBackColor = true;
-            this.buttonNext.Click += new System.EventHandler(this.buttonNext_Click);
-            // 
             // buttonGoAgain
             // 
             this.buttonGoAgain.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonGoAgain.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.buttonGoAgain.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.buttonGoAgain.Location = new System.Drawing.Point(253, 252);
+            this.buttonGoAgain.Location = new System.Drawing.Point(253, 203);
             this.buttonGoAgain.Name = "buttonGoAgain";
             this.buttonGoAgain.Size = new System.Drawing.Size(113, 58);
             this.buttonGoAgain.TabIndex = 5;
@@ -113,14 +103,53 @@
             this.buttonGoAgain.Visible = false;
             this.buttonGoAgain.Click += new System.EventHandler(this.buttonGoAgain_Click);
             // 
+            // labelCorrect
+            // 
+            this.labelCorrect.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.labelCorrect.AutoSize = true;
+            this.labelCorrect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelCorrect.ForeColor = System.Drawing.Color.Black;
+            this.labelCorrect.Location = new System.Drawing.Point(267, 302);
+            this.labelCorrect.Name = "labelCorrect";
+            this.labelCorrect.Size = new System.Drawing.Size(87, 22);
+            this.labelCorrect.TabIndex = 6;
+            this.labelCorrect.Text = "Correct?";
+            this.labelCorrect.Visible = false;
+            // 
+            // buttonX
+            // 
+            this.buttonX.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonX.Image = ((System.Drawing.Image)(resources.GetObject("buttonX.Image")));
+            this.buttonX.Location = new System.Drawing.Point(319, 340);
+            this.buttonX.Name = "buttonX";
+            this.buttonX.Size = new System.Drawing.Size(35, 28);
+            this.buttonX.TabIndex = 7;
+            this.buttonX.UseVisualStyleBackColor = true;
+            this.buttonX.Visible = false;
+            this.buttonX.Click += new System.EventHandler(this.buttonX_Click);
+            // 
+            // buttonV
+            // 
+            this.buttonV.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.buttonV.Image = ((System.Drawing.Image)(resources.GetObject("buttonV.Image")));
+            this.buttonV.Location = new System.Drawing.Point(271, 340);
+            this.buttonV.Name = "buttonV";
+            this.buttonV.Size = new System.Drawing.Size(35, 28);
+            this.buttonV.TabIndex = 8;
+            this.buttonV.UseVisualStyleBackColor = true;
+            this.buttonV.Visible = false;
+            this.buttonV.Click += new System.EventHandler(this.button2_Click);
+            // 
             // LearnForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.MenuHighlight;
             this.ClientSize = new System.Drawing.Size(638, 464);
+            this.Controls.Add(this.buttonV);
+            this.Controls.Add(this.buttonX);
+            this.Controls.Add(this.labelCorrect);
             this.Controls.Add(this.buttonGoAgain);
-            this.Controls.Add(this.buttonNext);
             this.Controls.Add(this.buttonShow);
             this.Controls.Add(this.labelDescription);
             this.Controls.Add(this.labelTerm);
@@ -141,7 +170,9 @@
         private System.Windows.Forms.Label labelTerm;
         private System.Windows.Forms.Label labelDescription;
         private System.Windows.Forms.Button buttonShow;
-        private System.Windows.Forms.Button buttonNext;
         private System.Windows.Forms.Button buttonGoAgain;
+        private System.Windows.Forms.Label labelCorrect;
+        private System.Windows.Forms.Button buttonX;
+        private System.Windows.Forms.Button buttonV;
     }
 }

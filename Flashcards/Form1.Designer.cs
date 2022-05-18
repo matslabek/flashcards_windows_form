@@ -41,7 +41,7 @@
             // 
             this.buttonCreateSet.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonCreateSet.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonCreateSet.Location = new System.Drawing.Point(629, 419);
+            this.buttonCreateSet.Location = new System.Drawing.Point(505, 419);
             this.buttonCreateSet.Margin = new System.Windows.Forms.Padding(4);
             this.buttonCreateSet.Name = "buttonCreateSet";
             this.buttonCreateSet.Size = new System.Drawing.Size(198, 83);
@@ -54,11 +54,12 @@
             // 
             this.labelTitle.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelTitle.AutoSize = true;
-            this.labelTitle.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.labelTitle.Location = new System.Drawing.Point(340, 61);
+            this.labelTitle.Font = new System.Drawing.Font("Cambria", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.labelTitle.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.labelTitle.Location = new System.Drawing.Point(119, 48);
             this.labelTitle.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.labelTitle.Name = "labelTitle";
-            this.labelTitle.Size = new System.Drawing.Size(325, 23);
+            this.labelTitle.Size = new System.Drawing.Size(584, 40);
             this.labelTitle.TabIndex = 1;
             this.labelTitle.Text = "Welcome to the Flashcards program!";
             // 
@@ -66,7 +67,7 @@
             // 
             this.buttonLearn.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonLearn.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonLearn.Location = new System.Drawing.Point(288, 225);
+            this.buttonLearn.Location = new System.Drawing.Point(171, 225);
             this.buttonLearn.Margin = new System.Windows.Forms.Padding(4);
             this.buttonLearn.Name = "buttonLearn";
             this.buttonLearn.Size = new System.Drawing.Size(199, 93);
@@ -78,7 +79,7 @@
             // newSetTextBox
             // 
             this.newSetTextBox.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.newSetTextBox.Location = new System.Drawing.Point(385, 446);
+            this.newSetTextBox.Location = new System.Drawing.Point(261, 446);
             this.newSetTextBox.Margin = new System.Windows.Forms.Padding(4);
             this.newSetTextBox.Name = "newSetTextBox";
             this.newSetTextBox.Size = new System.Drawing.Size(220, 31);
@@ -88,7 +89,7 @@
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(188, 449);
+            this.label2.Location = new System.Drawing.Point(64, 449);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(189, 23);
@@ -99,7 +100,7 @@
             // 
             this.buttonEditDeck.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.buttonEditDeck.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.buttonEditDeck.Location = new System.Drawing.Point(536, 225);
+            this.buttonEditDeck.Location = new System.Drawing.Point(443, 225);
             this.buttonEditDeck.Margin = new System.Windows.Forms.Padding(4);
             this.buttonEditDeck.Name = "buttonEditDeck";
             this.buttonEditDeck.Size = new System.Drawing.Size(199, 93);
@@ -113,7 +114,7 @@
             this.selectSetComboBox.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.selectSetComboBox.Font = new System.Drawing.Font("Cambria", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.selectSetComboBox.FormattingEnabled = true;
-            this.selectSetComboBox.Location = new System.Drawing.Point(385, 131);
+            this.selectSetComboBox.Location = new System.Drawing.Point(298, 128);
             this.selectSetComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.selectSetComboBox.Name = "selectSetComboBox";
             this.selectSetComboBox.Size = new System.Drawing.Size(242, 31);
@@ -123,7 +124,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(11F, 23F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 647);
+            this.ClientSize = new System.Drawing.Size(852, 647);
             this.Controls.Add(this.selectSetComboBox);
             this.Controls.Add(this.buttonEditDeck);
             this.Controls.Add(this.label2);
